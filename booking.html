@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Transfer | Salam Transfers — Private Transportation Cancun</title>
+  <script>
+    (function() {
+      var savedLang = 'en';
+      try {
+        var saved = localStorage.getItem('salam_lang');
+        if (saved && ['es', 'en', 'fr', 'ar'].indexOf(saved) > -1) {
+          savedLang = saved;
+        } else if (navigator.language) {
+          var pref = navigator.language.toLowerCase().split('-')[0];
+          if (['es', 'en', 'fr', 'ar'].indexOf(pref) > -1) savedLang = pref;
+        }
+      } catch (e) {}
+
+      var phone = '529842190001';
+      var urlParams = new URLSearchParams(window.location.search);
+      var service = urlParams.get('service') || '';
+
+      var messages = {
+        en: {
+          airport: "Hello Salam Transfers, I would like to request a quote for an *Airport Transfer*. Here are my travel details:\n\n• *Trip Type:* (e.g., One-way / Round-trip)\n• *Origin / Hotel:*\n• *Destination / Hotel:*\n• *Service Date:*\n• *Pickup Time:*\n• *Airline & Flight Number:*\n• *Number of Passengers:* (e.g., 4 adults and 1 child)\n• *Amount of Luggage:* (e.g., 3 large suitcases)\n\nCould you please provide a quote? Thank you!",
+          chauffeur: "Hello Salam Transfers, I am interested in booking a *Private Chauffeur per Day*. Here is my estimated itinerary:\n\n• *Service Date:*\n• *Start Time:*\n• *Duration Option:* (e.g., Half-Day - 5h / Full-Day - 10h / Hourly)\n• *Pickup Location:*\n• *Planned Destinations/Activities:* (e.g., Chichen Itza Tour / Shopping)\n• *Number of Passengers:*\n\nI look forward to your quote to schedule my itinerary. Thank you!",
+          mosque: "Hello Salam Transfers, I require a dedicated *Mosque Transportation* service. Here are my visit details:\n\n• *Destination Mosque:* (e.g., Masjid Al-Rahim in Cancun / Masjid Al-Rahman in Playa del Carmen)\n• *Service Option:* (e.g., Round-trip with waiting time during prayer / One-way)\n• *Service Date:*\n• *Pickup Time from Hotel:*\n• *Prayer Type:* (e.g., Salat al-Jumu'ah - Friday Prayer / Isha)\n• *Number of Passengers:*\n\nThank you for your attention and respect toward our prayer times. I look forward to your reply.",
+          events: "Hello Salam Transfers, I would like to request a customized quote for an *Event or Wedding*. Here are the initial logistics details:\n\n• *Event Type:* (e.g., Destination Wedding / Conference / Retreat)\n• *Event Date(s):*\n• *Estimated Number of Guests:*\n• *Required Services:* (e.g., Guest airport shuttle / Exclusive van for the bride and groom)\n\nPlease contact me to coordinate the specific details. Thank you very much!",
+          heroReserve: "Hello Salam Transfers, I would like to request a quote for a transportation service. Here are my details:\nService:\nOrigin:\nDestination:\nDate and Time:\nPassengers:\nLuggage:\nI look forward to receiving my quote."
+        },
+        es: {
+          airport: "Hola Salam Transfers, me interesa cotizar un *Traslado al Aeropuerto*. Estos son los detalles de mi viaje:\n\n• *Tipo de viaje:* (Ej: Solo ida / Viaje redondo)\n• *Origen / Hotel:*\n• *Destino / Hotel:*\n• *Fecha del servicio:*\n• *Hora de recogida:*\n• *Aerolínea y Número de vuelo:*\n• *Número de Pasajeros:* (Ej: 4 adultos y 1 niño)\n• *Cantidad de Equipaje:* (Ej: 3 maletas grandes)\n\n¿Me podrían apoyar con la cotización? ¡Gracias!",
+          chauffeur: "Hola Salam Transfers, me interesa el servicio de *Chofer Privado por Día*. Aquí está mi plan estimado:\n\n• *Fecha del servicio:*\n• *Hora de inicio:*\n• *Modalidad:* (Ej: Medio día - 5h / Día completo - 10h / Por horas)\n• *Punto de recogida:*\n• *Destinos o actividades planeadas:* (Ej: Tour a Chichén Itzá / Shopping)\n• *Número de Pasajeros:*\n\nQuedo atento a su cotización para programar mi itinerario. ¡Gracias!",
+          mosque: "Hola Salam Transfers, requiero un servicio dedicado de *Transportación a la Mezquita*. Estos son los datos de mi visita:\n\n• *Mezquita de destino:* (Ej: Masjid Al-Rahim en Cancún / Masjid Al-Rahman en Playa del Carmen)\n• *Modalidad:* (Ej: Viaje redondo con espera durante la oración / Solo ida)\n• *Fecha del servicio:*\n• *Hora de salida desde el hotel:*\n• *Tipo de oración:* (Ej: Salat al-Jumu'ah - Oración del viernes / Isha)\n• *Número de Pasajeros:*\n\nAgradezco su atención y respeto a nuestros tiempos de oración. Quedo atento.",
+          events: "Hola Salam Transfers, me gustaría solicitar una cotización personalizada para un *Evento o Boda*. Estos son los datos iniciales de la logística:\n\n• *Tipo de evento:* (Ej: Boda de destino / Conferencia / Retiro)\n• *Fecha o fechas del evento:*\n• *Número estimado de invitados:*\n• *Servicios requeridos:* (Ej: Traslado de invitados desde el aeropuerto / Camioneta exclusiva para los novios)\n\nPor favor, pónganse en contacto conmigo para conocer los detalles. ¡Muchas gracias!",
+          heroReserve: "Hola Salam Transfers, me gustaría solicitar una cotización para un servicio de transportación. Aquí están mis datos:\nServicio:\nOrigen:\nDestino:\nFecha y Hora:\nPasajeros:\nEquipaje:\nQuedo a la espera de recibir mi cotización."
+        },
+        fr: {
+          airport: "Bonjour Salam Transfers, je souhaite obtenir un devis pour un *Transfert Aéroport*. Voici les détails de mon voyage:\n\n• *Type de voyage:* (Ex: Aller simple / Retour)\n• *Origine / Hôtel:*\n• *Destination / Hôtel:*\n• *Date du service:*\n• *Heure de prise en charge:*\n• *Compagnie aérienne & Numéro de vol:*\n• *Nombre de passagers:* (Ex: 4 adultes et 1 enfant)\n• *Nombre de bagages:* (Ex: 3 grands bagages)\n\nPouvez-vous m'aider avec un devis? Merci!",
+          chauffeur: "Bonjour Salam Transfers, je suis intéressé par le service de *Chauffeur Privé à la Journée*. Voici mon plan estimatif:\n\n• *Date du service:*\n• *Heure de début:*\n• *Durée:* (Ex: Demi-journée - 5h / Journée entière - 10h / Horaire)\n• *Lieu de prise en charge:*\n• *Destinations ou activités prévues:* (Ex: Tour à Chichén Itzá / Shopping)\n• *Nombre de passagers:*\n\nJ'attends votre devis avec impatience pour planifier mon itinéraire. Merci!",
+          mosque: "Bonjour Salam Transfers, j'ai besoin d'un service dédié de *Transport vers la Mosquée*. Voici les détails de ma visite:\n\n• *Mosquée de destination:* (Ex: Masjid Al-Rahim à Cancún / Masjid Al-Rahman à Playa du Carmen)\n• *Type:* (Ex: Aller-retour avec attente pendant la prière / Aller simple)\n• *Date du service:*\n• *Heure de départ de l'hôtel:*\n• *Type de prière:* (Ex: Salat al-Jumu'ah - Prière du vendredi / Isha)\n• *Nombre de passagers:*\n\nMerci pour votre attention et votre respect pour nos temps de prière. j'attends votre retour.",
+          events: "Bonjour Salam Transfers, je souhaite demander un devis personnalisé pour un *Événement ou un Mariage*. Voici les premières informations logistiques:\n\n• *Type d'événement:* (Ex: Mariage à destination / Conférence / Retraite)\n• *Date(s) de l'événement:*\n• *Nombre estimé d'invités:*\n• *Services requis:* (Ex: Transfert d'invités depuis l'aéroport / Camionnette exclusive pour les mariés)\n\nVeuillez me contacter pour discuter des détails. Merci beaucoup!",
+          heroReserve: "Bonjour Salam Transfers, je souhaite demander un devis pour un service de transport. Voici mes coordonnées :\nService :\nOrigine :\nDestination :\nDate et Heure :\nPassagers :\nBagages :\nDans l'attente de recevoir mon devis."
+        },
+        ar: {
+          airport: "مرحباً سلام ترانسفيرز، أود الحصول على تسعيرة لخدمة *التوصيل من وإلى المطار*. تفاصيل رحلتي كالتالي:\n\n• *نوع الرحلة:* (مثال: ذهاب فقط / ذهاب وعودة)\n• *مكان الانطلاق / الفندق:*\n• *الوجهة / الفندق:*\n• *تاريخ الخدمة:*\n• *وقت الالتقاء:*\n• *شركة الطيران ورقم الرحلة:*\n• *عدد الركاب:* (مثال: 4 بالغين وطفل واحد)\n• *كمية الأمتعة:* (مثال: 3 حقائب كبيرة)\n\nهل يمكنكم مساعدتي في الحصول على تسعيرة؟ شكراً لكم!",
+          chauffeur: "مرحباً سلام ترانسفيرز، أنا مهتم بخدمة *سائق خاص لليوم*. إليك خطتي التقديرية:\n\n• *تاريخ الخدمة:*\n• *وقت البدء:*\n• *المدة:* (مثال: نصف يوم - 5 ساعات / يوم كامل - 10 ساعات / بالساعة)\n• *مكان الانطلاق:*\n• *الوجهات أو الأنشطة المخطط لها:* (مثال: جولة في تشيتشن إيتزا / تسوق)\n• *عدد الركاب:*\n\nأنا بانتظار عرض السعر لتنظيم مسار رحلتي. شكراً لكم!",
+          mosque: "مرحباً سلام ترانسفيرز، أحتاج لخدمة مخصصة لـ *النقل إلى المسجد*. تفاصيل زيارتي كالتالي:\n\n• *المسجد المستهدف:* (مثال: مسجد الرحيم في كانكون / مسجد الرحمن في بلايا ديل كارمن)\n• *النوع:* (مثال: ذهاب وعودة مع الانتظار أثناء الصلاة / ذهاب فقط)\n• *تاريخ الخدمة:*\n• *وقت المغادرة من الفندق:*\n• *نوع الصلاة:* (مثال: صلاة الجمعة / العشاء)\n• *عدد الركاب:*\n\nنشكر اهتمامكم واحترامكم لأوقات صلاتنا. أنا بانتظار ردكم.",
+          events: "مرحباً سلام ترانسفيرز، أود طلب عرض سعر مخصص لـ *مناسبة أو حفل زفاف*. إليك البيانات اللوجستية الأولية:\n\n• *نوع المناسبة:* (مثال: حفل زفاف / مؤتمر / تراجع)\n• *تاريخ أو تواريخ المناسبة:*\n• *العدد التقديري للضيوف:*\n• *الخدمات المطلوبة:* (مثال: نقل الضيوف من المطار / حافلة مخصصة للعروسين)\n\nيرجى التواصل معي لمناقشة التفاصيل. شكراً جزيلاً!",
+          heroReserve: "مرحباً سلام ترانسفيرز، أود طلب عرض سعر لخدمة نقل. إليك تفاصيلي:\nالخدمة:\nنقطة الانطلاق:\nالوجهة:\nالتاريخ والوقت:\nعدد الركاب:\nالأمتعة:\nبانتظار تلقي عرض السعر الخاص بي."
+        }
+      };
+
+      var selectedMsgs = messages[savedLang] || messages['en'];
+      var text = selectedMsgs.heroReserve;
+      if (service === 'mosque') text = selectedMsgs.mosque;
+      else if (service === 'chauffeur') text = selectedMsgs.chauffeur;
+      else if (service === 'events') text = selectedMsgs.events;
+      else if (service === 'airport') text = selectedMsgs.airport;
+
+      window.location.replace('https://wa.me/' + phone + '?text=' + encodeURIComponent(text));
+    })();
+  </script>
+  <meta name="description" content="Book your private transfer in Cancun, Playa del Carmen, or Tulum. Salam Transfers routes all booking inquiries directly through WhatsApp for instant bilingual quotes.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://salamtransfers.com/booking.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+</head>
+<body>
+  <noscript>
+    <p style="padding:2rem;text-align:center;color:#fff;background:#0a0a0a;">
+      Please <a href="https://wa.me/529842190001" style="color:#caa052;">contact us via WhatsApp at +52 984 219 0001</a> to book your transfer.
+    </p>
+  </noscript>
+</body>
+</html>

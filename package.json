@@ -1,0 +1,24 @@
+{
+  "name": "salam-transfers",
+  "version": "1.1.0",
+  "description": "Premium Private Transportation Service in Cancun & Riviera Maya — Muslim-friendly, bilingual, deployable on Vercel.",
+  "private": true,
+  "main": "index.html",
+  "homepage": "https://salamtransfers.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AIQROO/salam-transfers.git"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "npx http-server ./ -p 3003 -c-1",
+    "dev": "npx http-server ./ -p 3003 -c-1",
+    "preview": "npx http-server ./ -p 3003 -c 60"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

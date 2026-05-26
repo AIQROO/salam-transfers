@@ -1331,8 +1331,33 @@ const TRANSLATIONS = {
 };
 
 // --- Localization Core Engine ---
-let salam_active_lang = 'en'; // fallback in-memory state (English primary)
+// URL is the source of truth: /es/* → es, /fr/* → fr, /ar/* → ar, else → en.
+// The lang switcher navigates to the corresponding URL so each language has its
+// own indexable canonical (real SEO benefit instead of client-side swap).
 const SUPPORTED_LANGS = ['en', 'es', 'fr', 'ar'];
+const LANG_PREFIX_REGEX = /^\/(es|fr|ar)(\/|$)/;
+
+function getLanguageFromPath() {
+  const match = window.location.pathname.match(LANG_PREFIX_REGEX);
+  return match ? match[1] : 'en';
+}
+
+function getPageRelativePath() {
+  // Returns the path of the current page WITHOUT any language prefix.
+  // Used to map between language versions of the same page.
+  let p = window.location.pathname;
+  p = p.replace(LANG_PREFIX_REGEX, '/');
+  // Strip leading slash; index files become 'index.html'
+  if (p === '/' || p === '') return '';
+  if (p.endsWith('/')) return p.slice(1);
+  return p.replace(/^\//, '');
+}
+
+function buildLanguageUrl(lang, page) {
+  const prefix = lang === 'en' ? '' : `/${lang}`;
+  if (!page) return `${prefix}/`;
+  return `${prefix}/${page}`;
+}
 
 function detectBrowserLanguage() {
   try {
@@ -1344,28 +1369,51 @@ function detectBrowserLanguage() {
 }
 
 function getLanguage() {
-  try {
-    const saved = localStorage.getItem('salam_lang');
-    if (saved && SUPPORTED_LANGS.includes(saved)) {
-      return saved;
-    }
-  } catch (e) {
-    console.warn("localStorage is blocked, falling back to in-memory lang storage:", e);
-  }
-  // No saved preference: detect from browser, but default to English
-  const detected = detectBrowserLanguage();
-  salam_active_lang = detected;
-  return detected;
+  return getLanguageFromPath();
 }
 
 function setLanguage(lang) {
-  salam_active_lang = lang;
+  if (!SUPPORTED_LANGS.includes(lang)) return;
   try {
     localStorage.setItem('salam_lang', lang);
   } catch (e) {
     console.warn("localStorage is blocked, cannot persist lang selection:", e);
   }
-  updatePageLanguage(lang);
+  const currentLang = getLanguageFromPath();
+  if (lang === currentLang) return;
+  const page = getPageRelativePath();
+  window.location.href = buildLanguageUrl(lang, page);
+}
+
+// One-time soft suggestion on root EN visits: if the user previously selected
+// a different language, hint with a discreet toast (no auto-redirect — that
+// hurts SEO and confuses crawlers).
+function maybeShowLanguageHint() {
+  if (getLanguageFromPath() !== 'en') return;
+  try {
+    const saved = localStorage.getItem('salam_lang');
+    if (!saved || saved === 'en' || !SUPPORTED_LANGS.includes(saved)) return;
+    if (sessionStorage.getItem('salam_lang_hint_dismissed') === '1') return;
+    // Defer to next tick so it doesn't block paint
+    setTimeout(() => showLanguageHint(saved), 800);
+  } catch (e) { /* ignore */ }
+}
+
+function showLanguageHint(savedLang) {
+  const labels = { es: 'Ver en español', fr: 'Voir en français', ar: 'مشاهدة بالعربية' };
+  const label = labels[savedLang];
+  if (!label) return;
+  const page = getPageRelativePath();
+  const url = buildLanguageUrl(savedLang, page);
+  const hint = document.createElement('div');
+  hint.setAttribute('role', 'status');
+  hint.style.cssText = 'position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#0a0a0a;color:#fff;padding:0.75rem 1.25rem;border:1px solid rgba(151,134,100,0.4);border-radius:8px;font-size:0.9rem;display:flex;gap:1rem;align-items:center;z-index:1100;box-shadow:0 6px 20px rgba(0,0,0,0.5);';
+  hint.innerHTML = `<a href="${url}" style="color:#caa052;font-weight:600;text-decoration:none;">${label} →</a><button aria-label="Dismiss" style="background:transparent;border:none;color:#aaa;font-size:1.1rem;cursor:pointer;line-height:1;">×</button>`;
+  hint.querySelector('button').addEventListener('click', () => {
+    try { sessionStorage.setItem('salam_lang_hint_dismissed', '1'); } catch (e) {}
+    hint.remove();
+  });
+  document.body.appendChild(hint);
 }
 
 function updatePageLanguage(lang) {
@@ -1529,6 +1577,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Language Initialization
   const currentLang = getLanguage();
   updatePageLanguage(currentLang);
+  maybeShowLanguageHint();
 
   // Language Dropdown toggles
   const langBtn = document.getElementById('lang-selector-btn');

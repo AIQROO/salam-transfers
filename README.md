@@ -40,10 +40,24 @@ Requires Node.js 18+.
 
 ```bash
 npm install
-npm run dev
+npm run build   # generates /es, /fr, /ar directories with pre-rendered HTML
+npm run dev     # http://localhost:3003
 ```
 
-Then open `http://localhost:3003`.
+The English source-of-truth lives at the repo root (`index.html`, `services.html`, …). The build script (`build.mjs`) reads the `TRANSLATIONS` block from `main.js` plus per-page localized `<title>` / `<meta description>` from `PAGE_META` inside the script, and emits a full copy of every page under `/es/`, `/fr/`, and `/ar/` with:
+
+- text content of `[data-i18n]` elements replaced by the target-language string,
+- `[data-i18n-placeholder]` attributes localized,
+- `<html lang="…">` (plus `dir="rtl"` for Arabic) updated,
+- per-page `<title>`, meta description, OG/Twitter title/description, `og:locale` localized,
+- self-referencing `<link rel="canonical">` for the language variant,
+- a complete hreflang block (en/es/fr/ar/x-default) pointing to all variants,
+- relative asset paths (`styles.css`, `main.js`, `Logo/…`, `assets/…`) rewritten to `../` so they resolve from the subdirectory; nav links stay relative so `services.html` from `/es/index.html` resolves to `/es/services.html`,
+- `<span id="current-lang-text">` flipped to the target language code.
+
+`sitemap.xml` is regenerated to list every page × every language with full hreflang annotations.
+
+To add or edit a translation, update `TRANSLATIONS` in `main.js` (text content) and/or `PAGE_META` in `build.mjs` (titles/descriptions), then re-run `npm run build`.
 
 ---
 

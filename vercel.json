@@ -2,10 +2,15 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".",
   "redirects": [
     { "source": "/index", "destination": "/", "permanent": true },
     { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/booking", "destination": "/contact", "permanent": false }
+    { "source": "/booking", "destination": "/contact", "permanent": false },
+    { "source": "/es/index", "destination": "/es/", "permanent": true },
+    { "source": "/fr/index", "destination": "/fr/", "permanent": true },
+    { "source": "/ar/index", "destination": "/ar/", "permanent": true }
   ],
   "headers": [
     {

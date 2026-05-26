@@ -159,19 +159,19 @@ const PAGE_META = {
   'contact.html': {
     en: {
       title: 'Contact | Salam Transfers — 24/7 Bilingual Support',
-      description: 'Contact Salam Transfers for private transportation in Cancun, Playa del Carmen, and Tulum. WhatsApp +52 984 219 0001, email salamtransfers@gmail.com. Bilingual 24/7 support in English, Spanish, French, and Arabic.',
+      description: 'Contact Salam Transfers for private transportation in Cancun, Playa del Carmen, and Tulum. WhatsApp +52 984 219 0001. Bilingual 24/7 support in English, Spanish, French, and Arabic.',
     },
     es: {
       title: 'Contacto | Salam Transfers — Atención Bilingüe 24/7',
-      description: 'Contacta a Salam Transfers para transportación privada en Cancún, Playa del Carmen y Tulum. WhatsApp +52 984 219 0001, email salamtransfers@gmail.com. Atención bilingüe 24/7 en inglés, español, francés y árabe.',
+      description: 'Contacta a Salam Transfers para transportación privada en Cancún, Playa del Carmen y Tulum. WhatsApp +52 984 219 0001. Atención bilingüe 24/7 en inglés, español, francés y árabe.',
     },
     fr: {
       title: 'Contact | Salam Transfers — Assistance Bilingue 24/7',
-      description: 'Contactez Salam Transfers pour un transport privé à Cancun, Playa del Carmen et Tulum. WhatsApp +52 984 219 0001, email salamtransfers@gmail.com. Assistance bilingue 24/7 en anglais, espagnol, français et arabe.',
+      description: 'Contactez Salam Transfers pour un transport privé à Cancun, Playa del Carmen et Tulum. WhatsApp +52 984 219 0001. Assistance bilingue 24/7 en anglais, espagnol, français et arabe.',
     },
     ar: {
       title: 'تواصل معنا | سلام ترانسفيرز — دعم ثنائي اللغة على مدار الساعة',
-      description: 'تواصل مع سلام ترانسفيرز للنقل الخاص في كانكون وبلايا ديل كارمن وتولوم. واتساب +52 984 219 0001، البريد الإلكتروني salamtransfers@gmail.com. دعم ثنائي اللغة 24/7 بالإنجليزية والإسبانية والفرنسية والعربية.',
+      description: 'تواصل مع سلام ترانسفيرز للنقل الخاص في كانكون وبلايا ديل كارمن وتولوم. واتساب +52 984 219 0001. دعم ثنائي اللغة 24/7 بالإنجليزية والإسبانية والفرنسية والعربية.',
     },
   },
   'terms.html': {

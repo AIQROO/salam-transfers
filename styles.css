@@ -38,7 +38,7 @@
   
   /* Layout */
   --max-width: 1200px;
-  --header-height: 80px;
+  --header-height: 120px;
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --border-radius-lg: 16px;
@@ -253,7 +253,7 @@ a:hover {
 }
 
 .brand-logo-img {
-  height: 55px;
+  height: 100px;
   width: auto;
   transition: var(--transition-smooth);
   /* Logo source is black-on-transparent; invert to white so it reads on the dark header */
@@ -261,7 +261,7 @@ a:hover {
 }
 
 .site-header.scrolled .brand-logo-img {
-  height: 48px;
+  height: 80px;
 }
 
 .main-nav {
@@ -1045,7 +1045,7 @@ a:hover {
 }
 
 .footer-logo {
-  height: 60px;
+  height: 120px;
   width: auto;
   margin-bottom: 1.5rem;
   /* Same black-on-transparent source: invert to white for the dark footer */
@@ -1228,7 +1228,7 @@ a:hover {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: 70px;
+    --header-height: 95px;
   }
   
   .mobile-menu-toggle {
@@ -1347,7 +1347,8 @@ a:hover {
   .hero-subtitle { font-size: 0.95rem; }
   .section-title { font-size: 1.6rem; }
   .header-container { padding: 0 1rem; }
-  .brand-logo-img { height: 42px; }
+  .brand-logo-img { height: 75px; }
+  .footer-logo { height: 90px; }
   .whatsapp-bubble { bottom: 18px; right: 18px; width: 52px; height: 52px; font-size: 1.6rem; }
   [dir="rtl"] .whatsapp-bubble { left: 18px; right: auto; }
 }

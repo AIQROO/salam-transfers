@@ -80,7 +80,6 @@ Custom domain: point `salamtransfers.com` to Vercel and add the domain in the pr
 
 - GitHub: https://github.com/AIQROO/salam-transfers
 - WhatsApp dispatcher: `+52 984 219 0001`
-- Email: `salamtransfers@gmail.com`
 
 ---
 

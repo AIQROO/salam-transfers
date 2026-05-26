@@ -119,18 +119,18 @@ const TRANSLATIONS = {
     // Privacy Page
     privacy_title: "Política de Privacidad",
     privacy_h1: "1. Información que Recopilamos",
-    privacy_p1: "Recopilamos la información personal necesaria para organizar y realizar sus solicitudes de transporte privado, incluyendo: Nombre Completo, Dirección de Correo Electrónico, Número de Teléfono/WhatsApp, Números de Vuelo, Fechas y Lugares de recogida y destino. No almacenamos los datos completos de su tarjeta de crédito; todas las transacciones financieras se procesan de forma segura directamente a través de nuestra pasarela de pagos, Stripe.",
+    privacy_p1: "Recopilamos la información personal necesaria para organizar y realizar sus solicitudes de transporte privado, incluyendo: Nombre Completo, Número de Teléfono/WhatsApp, Números de Vuelo, Fechas y Lugares de recogida y destino. No almacenamos los datos completos de su tarjeta de crédito; todas las transacciones financieras se procesan de forma segura directamente a través de nuestra pasarela de pagos, Stripe.",
     privacy_h2: "2. Cómo Utilizamos su Información",
     privacy_p2: "Sus datos se utilizan estrictamente para coordinar sus traslados privados, comunicar detalles de llegada de su chofer, enviar recibos de depósito y gestionar actualizaciones de cortesía por retrasos de vuelos. No vendemos, alquilamos ni cedemos su información personal a terceros.",
     privacy_h3: "3. Retención y Protección de Datos",
     privacy_p3: "Implementamos arquitecturas de bases de datos seguras y certificados SSL de encriptación para proteger sus datos personales contra el acceso no autorizado. Conservamos los registros de viaje únicamente durante el tempo necesario para el cumplimiento administrativo, el soporte al cliente y la contabilidad financiera.",
     privacy_h4: "4. Sus Derechos",
-    privacy_p4: "Usted tiene derecho a solicitar el acceso, rectificación o eliminación de sus datos personales almacenados en nuestros sistemas. Puede ejercer estos derechos en cualquier momento poniéndose en contacto con nuestro equipo de soporte por correo electrónico a privacy@salamtransfers.com.",
+    privacy_p4: "Usted tiene derecho a solicitar el acceso, rectificación o eliminación de sus datos personales almacenados en nuestros sistemas. Puede ejercer estos derechos en cualquier momento poniéndose en contacto con nuestro equipo de soporte por WhatsApp al +52 984 219 0001.",
 
     // Cancellation Page
     cancel_title: "Política de Cancelación y Cambios",
     cancel_h1: "1. Reglas de Cancelación",
-    cancel_p1: "Las reservaciones pueden ser canceladas en cualquier momento notificando a nuestro centro de soporte por correo electrónico o WhatsApp. Tenga en cuenta que el depósito pagado en línea durante la reserva no es reembolsable bajo ninguna circunstancia. Esta cantidad sirve para asegurar su conductor y la disponibilidad del vehículo, protegiendo nuestra programación operativa.",
+    cancel_p1: "Las reservaciones pueden ser canceladas en cualquier momento notificando a nuestro centro de soporte por WhatsApp al +52 984 219 0001. Tenga en cuenta que el depósito pagado en línea durante la reserva no es reembolsable bajo ninguna circunstancia. Esta cantidad sirve para asegurar su conductor y la disponibilidad del vehículo, protegiendo nuestra programación operativa.",
     cancel_h2: "2. Modificaciones Gratuitas y Cambios de Fecha",
     cancel_p2: "Permitimos cambios ilimitados de fecha, hora y ruta del vehículo sin cargo alguno hasta 24 horas antes del servicio programado. Si la nueva ruta incurre en una tarifa más alta, el cliente debe pagar la diferencia al llegar. Si la nueva ruta es menos costosa, el saldo pendiente a pagar al conductor se reducirá en consecuencia.",
     cancel_h3: "3. Retrasos y Cancelaciones de Vuelos",
@@ -167,7 +167,7 @@ const TRANSLATIONS = {
     step3_title: "Anticipo Seguro",
     step3_desc: "Confirma tu reserva con un anticipo pagado en línea.",
     step4_title: "Confirmación Inmediata",
-    step4_desc: "Recibe confirmación por email y WhatsApp, con los datos de tu chofer.",
+    step4_desc: "Recibe confirmación por WhatsApp, con los datos de tu chofer.",
     step5_title: "Contacto del Chofer",
     step5_desc: "Tu chofer te contacta el día anterior para coordinar el punto de encuentro.",
     step6_title: "Viaje & Pago",
@@ -275,7 +275,8 @@ const TRANSLATIONS = {
     contact_form_title: "Envíanos un Mensaje",
     contact_name: "Nombre Completo",
     contact_email: "Correo Electrónico",
-    contact_phone: "Número de Teléfono",
+    contact_phone: "Teléfono / WhatsApp",
+    contact_form_note: "Te responderemos por WhatsApp al número que nos compartas.",
     contact_message: "Mensaje / Solicitud Especial",
     contact_send: "Enviar Mensaje",
     contact_info_title: "Información de contacto",
@@ -335,7 +336,7 @@ const TRANSLATIONS = {
     pay_secure: "Pago encriptado con seguridad SSL de 256 bits",
     
     success_title: "¡Reservación Confirmada!",
-    success_subtitle: "Tu traslado ha sido programado. Se ha enviado un correo con tu recibo de depósito.",
+    success_subtitle: "Tu traslado ha sido programado. Recibirás los detalles por WhatsApp.",
     success_num_label: "Número de Reservación",
     success_driver_title: "Tu Conductor Asignado (Placeholder)",
     success_driver_name: "Nombre del Chofer",
@@ -433,18 +434,18 @@ const TRANSLATIONS = {
     // Privacy Page
     privacy_title: "Privacy Policy",
     privacy_h1: "1. Information We Collect",
-    privacy_p1: "We collect personal information necessary to organize and fulfill your private transport requests, including: Full Name, Email Address, Telephone/WhatsApp Number, Flight Numbers, Dates, and Pick-up/Drop-off locations. We do not store full credit card data; all financial transactions are securely processed directly by our payment gateway, Stripe.",
+    privacy_p1: "We collect personal information necessary to organize and fulfill your private transport requests, including: Full Name, Telephone/WhatsApp Number, Flight Numbers, Dates, and Pick-up/Drop-off locations. We do not store full credit card data; all financial transactions are securely processed directly by our payment gateway, Stripe.",
     privacy_h2: "2. How We Use Your Information",
     privacy_p2: "Your details are strictly used to coordinate your private transfers, communicate arrival details, send deposit invoices, and manage flight delayed courtesy updates. We do not sell, rent, or lease your personal information to third parties.",
     privacy_h3: "3. Data Retention and Protection",
     privacy_p3: "We implement secure database architectures and SSL certificates to protect your personal details against unauthorized access. We retain travel records only as long as necessary for administrative compliance, customer support, and financial bookkeeping.",
     privacy_h4: "4. Your Rights",
-    privacy_p4: "You have the right to request access, rectification, or erasure of your personal data stored in our booking systems. You may exercise these rights at any time by contacting our support team via email at privacy@salamtransfers.com.",
+    privacy_p4: "You have the right to request access, rectification, or erasure of your personal data stored in our booking systems. You may exercise these rights at any time by contacting our support team via WhatsApp at +52 984 219 0001.",
 
     // Cancellation Page
     cancel_title: "Cancellation & Changes Policy",
     cancel_h1: "1. Cancellation Rules",
-    cancel_p1: "Reservations may be canceled at any time by notifying our support desk via email or WhatsApp. Please note that the online deposit paid during booking is strictly non-refundable. This amount serves to secure your driver block and vehicle availability, protecting our operational schedules.",
+    cancel_p1: "Reservations may be canceled at any time by notifying our support desk via WhatsApp at +52 984 219 0001. Please note that the online deposit paid during booking is strictly non-refundable. This amount serves to secure your driver block and vehicle availability, protecting our operational schedules.",
     cancel_h2: "2. Free Modifications and Date Changes",
     cancel_p2: "We permit unlimited date, time, and vehicle route changes free of charge up to 24 hours prior to the scheduled service time. If the new route incurs a higher rate, the customer must settle the difference at arrival. If the new route is less expensive, the remaining balance due to the driver will be reduced accordingly.",
     cancel_h3: "3. Flight Delays and Cancellations",
@@ -481,7 +482,7 @@ const TRANSLATIONS = {
     step3_title: "Secure Deposit",
     step3_desc: "Confirm your reservation with a secure deposit paid online.",
     step4_title: "Immediate Confirmation",
-    step4_desc: "Receive confirmation via email and WhatsApp, with your driver's details.",
+    step4_desc: "Receive confirmation via WhatsApp, with your driver's details.",
     step5_title: "Driver Contact",
     step5_desc: "Your driver contacts you the day before to coordinate the meeting point.",
     step6_title: "Enjoy & Settle",
@@ -589,7 +590,8 @@ const TRANSLATIONS = {
     contact_form_title: "Send Us a Message",
     contact_name: "Full Name",
     contact_email: "Email Address",
-    contact_phone: "Phone Number",
+    contact_phone: "Phone / WhatsApp",
+    contact_form_note: "We'll reply by WhatsApp at the number you provide.",
     contact_message: "Message / Special Requests",
     contact_send: "Send Message",
     contact_info_title: "Contact Information",
@@ -649,7 +651,7 @@ const TRANSLATIONS = {
     pay_secure: "Encrypted payment protected by 256-bit SSL security",
     
     success_title: "Booking Confirmed!",
-    success_subtitle: "Your transfer has been successfully scheduled. A receipt for your deposit has been sent to your email.",
+    success_subtitle: "Your transfer has been successfully scheduled. You'll receive the details via WhatsApp.",
     success_num_label: "Reservation Code",
     success_driver_title: "Your Assigned Driver Details",
     success_driver_name: "Driver Name",
@@ -747,18 +749,18 @@ const TRANSLATIONS = {
     // Privacy Page
     privacy_title: "Politique de confidentialité",
     privacy_h1: "1. Informations Recueillies",
-    privacy_p1: "Nous collectons les données personnelles nécessaires à l'organisation de votre transfert : Nom Complet, E-mail, Téléphone/WhatsApp, Numéro de Vol, Date et Lieux de prise en charge et de destination. Nous ne conservons pas les coordonnées bancaires complètes ; toutes les transactions sont traitées de manière sécurisée par notre passerelle Stripe.",
+    privacy_p1: "Nous collectons les données personnelles nécessaires à l'organisation de votre transfert : Nom Complet, Téléphone/WhatsApp, Numéro de Vol, Date et Lieux de prise en charge et de destination. Nous ne conservons pas les coordonnées bancaires complètes ; toutes les transactions sont traitées de manière sécurisée par notre passerelle Stripe.",
     privacy_h2: "2. Utilisation de vos Données",
     privacy_p2: "Vos coordonnées sont uniquement utilisées pour coordonner votre trajet privé, communiquer les informations d'arrivée, envoyer les reçus d'acompte et gérer les retards. Nous ne vendons, louons ni ne partageons vos données avec des tiers.",
     privacy_h3: "3. Protection et Conservation",
     privacy_p3: "Nous utilisons des bases de données sécurisées et des certificats SSL pour protéger vos données contre tout accès non autorisé. Nous ne conservons les données de voyage que le temps nécessaire aux exigences administratives, support client et comptabilité.",
     privacy_h4: "4. Vos Droits",
-    privacy_p4: "Vous disposez d'un droit d'accès, de rectification ou de suppression de vos données personnelles stockées dans nos systèmes. Vous pouvez exercer ce droit à tout moment en contactant privacy@salamtransfers.com.",
+    privacy_p4: "Vous disposez d'un droit d'accès, de rectification ou de suppression de vos données personnelles stockées dans nos systèmes. Vous pouvez exercer ce droit à tout moment en contactant notre équipe par WhatsApp au +52 984 219 0001.",
 
     // Cancellation Page
     cancel_title: "Politique d'annulation et modifications",
     cancel_h1: "1. Règles d'annulation",
-    cancel_p1: "Les réservations peuvent être annulées à tout moment en contactant notre équipe d'assistance par e-mail ou WhatsApp. Veuillez noter que l'acompte payé en ligne n'est strictement pas remboursable. Ce montant sert à sécuriser la réservation du chauffeur et du véhicule, protégeant ainsi notre organisation.",
+    cancel_p1: "Les réservations peuvent être annulées à tout moment en contactant notre équipe d'assistance par WhatsApp au +52 984 219 0001. Veuillez noter que l'acompte payé en ligne n'est strictement pas remboursable. Ce montant sert à sécuriser la réservation du chauffeur et du véhicule, protégeant ainsi notre organisation.",
     cancel_h2: "2. Modifications et Changements de Date Gratuits",
     cancel_p2: "We permit unlimited date, time, and vehicle route changes free of charge up to 24 hours prior to the scheduled service time. If the new route incurs a higher rate, the customer must settle the difference at arrival. If the new route is less expensive, the remaining balance due to the driver will be reduced accordingly.",
     cancel_h3: "3. Retards et Annulations de Vol",
@@ -795,7 +797,7 @@ const TRANSLATIONS = {
     step3_title: "Acompte Sécurisé",
     step3_desc: "Confirmez votre réservation avec un acompte payé en ligne.",
     step4_title: "Confirmation Immédiate",
-    step4_desc: "Recevez une confirmation par e-mail et WhatsApp, avec les coordonnées de votre chauffeur.",
+    step4_desc: "Recevez une confirmation par WhatsApp, avec les coordonnées de votre chauffeur.",
     step5_title: "Contact du Chauffeur",
     step5_desc: "Votre chauffeur vous contacte la veille pour coordonner le point de rencontre.",
     step6_title: "Profitez & Réglez",
@@ -903,7 +905,8 @@ const TRANSLATIONS = {
     contact_form_title: "Envoyez-nous un Message",
     contact_name: "Nom Complet",
     contact_email: "Adresse E-mail",
-    contact_phone: "Numéro de Téléphone",
+    contact_phone: "Téléphone / WhatsApp",
+    contact_form_note: "Nous vous répondrons par WhatsApp au numéro indiqué.",
     contact_message: "Message / Demandes Spéciales",
     contact_send: "Envoyer le Message",
     contact_info_title: "Coordonnées",
@@ -963,7 +966,7 @@ const TRANSLATIONS = {
     pay_secure: "Paiement crypté protégé par protocole SSL de 256 bits",
     
     success_title: "Réservation Confirmée !",
-    success_subtitle: "Votre trajet a été programmé avec succès. Un reçu d'acompte a été envoyé à votre adresse e-mail.",
+    success_subtitle: "Votre trajet a été programmé avec succès. Vous recevrez les détails par WhatsApp.",
     success_num_label: "Code de Réservation",
     success_driver_title: "Détails de Votre Chauffeur Assigné",
     success_driver_name: "Nom du Chauffeur",
@@ -1061,18 +1064,18 @@ const TRANSLATIONS = {
     // Privacy Page
     privacy_title: "سياسة الخصوصية",
     privacy_h1: "1. المعلومات التي نجمعها",
-    privacy_p1: "نحن نجمع المعلومات الشخصية اللازمة لتنظيم وتلبية طلبات النقل الخاصة بك، بما في ذلك: الاسم الكامل، عنوان البريد الإلكتروني، رقم الهاتف/الواتساب، أرقام الرحلات الجوية، التواريخ، ومواقع الالتقاء والتوصيل. نحن لا نخزن بيانات بطاقات الائتمان الكاملة؛ ويتم معالجة جميع المعاملات المالية بشكل آمن مباشرة بواسطة Stripe بوابة الدفع الخاصة بنا.",
+    privacy_p1: "نحن نجمع المعلومات الشخصية اللازمة لتنظيم وتلبية طلبات النقل الخاصة بك، بما في ذلك: الاسم الكامل، رقم الهاتف/الواتساب، أرقام الرحلات الجوية، التواريخ، ومواقع الالتقاء والتوصيل. نحن لا نخزن بيانات بطاقات الائتمان الكاملة؛ ويتم معالجة جميع المعاملات المالية بشكل آمن مباشرة بواسطة Stripe بوابة الدفع الخاصة بنا.",
     privacy_h2: "2. كيف نستخدم معلوماتك",
     privacy_p2: "تُستخدم تفاصيلك بدقة لتنسيق انتقالاتك الخاصة، وإرسال تفاصيل وصول السائق، وإرسال فواتير العربون، وإدارة تحديثات تأخر الرحلات مجاناً. نحن لا نبيع أو نؤجر معلوماتك الشخصية لأطراف ثالثة.",
     privacy_h3: "3. حماية البيانات والاحتفاظ بها",
     privacy_p3: "نحن نطبق بنيات قواعد بيانات آمنة وشهادات تشفير SSL لحماية تفاصيلك الشخصية ضد الوصول غير المصرح به. نحن نحتفظ بسجلات السفر فقط للفترة اللازمة للامتثال الإداري، ودعم العملاء، ومسك الدفاتر المالية.",
     privacy_h4: "4. حقوقك",
-    privacy_p4: "لديك الحق في طلب الوصول إلى بياناتك الشخصية المخزنة في أنظمة الحجز لدينا، أو تصحيحها، أو مسحها. يمكنك ممارسة هذه الحقوق في أي وقت عن طريق الاتصال بفريق الدعم لدينا عبر البريد الإلكتروني privacy@salamtransfers.com.",
+    privacy_p4: "لديك الحق في طلب الوصول إلى بياناتك الشخصية المخزنة في أنظمة الحجز لدينا، أو تصحيحها، أو مسحها. يمكنك ممارسة هذه الحقوق في أي وقت عن طريق الاتصال بفريق الدعم لدينا عبر واتساب على الرقم 529842190001+.",
 
     // Cancellation Page
     cancel_title: "سياسة الإلغاء والتعديل",
     cancel_h1: "1. قواعد الإلغاء",
-    cancel_p1: "يمكن إلغاء الحجوزات في أي وقت عن طريق إخطار مكتب الدعم لدينا عبر البريد الإلكتروني أو الواتساب. يرجى العلم بأن العربون المدفوع عبر الإنترنت أثناء الحجز غير قابل للاسترداد نهائياً. يخدم هذا المبلغ تأمين حجز السائق والمركبة وحماية جدول أعمالنا التشغيلي.",
+    cancel_p1: "يمكن إلغاء الحجوزات في أي وقت عن طريق إخطار مكتب الدعم لدينا عبر واتساب على الرقم 529842190001+. يرجى العلم بأن العربون المدفوع عبر الإنترنت أثناء الحجز غير قابل للاسترداد نهائياً. يخدم هذا المبلغ تأمين حجز السائق والمركبة وحماية جدول أعمالنا التشغيلي.",
     cancel_h2: "2. التعديلات المجانية وتغيير التواريخ",
     cancel_p2: "نحن نسمح بتغييرات غير محدودة للتواريخ والأوقات ومسارات المركبات مجاناً حتى 24 ساعة قبل موعد الخدمة المقرر. إذا كان المسار الجديد يترتب عليه سعر أعلى، يجب على العميل دفع الفارق عند الوصول. وإذا كان أقل تكلفة، فسيتم تخفيض الرصيد المتبقي المستحق للسائق وفقاً لذلك.",
     cancel_h3: "3. تأخير وإلغاء الرحلات الجوية",
@@ -1109,7 +1112,7 @@ const TRANSLATIONS = {
     step3_title: "دفعة مقدمة آمنة",
     step3_desc: "أكد حجزك بدفعة مقدمة مدفوعة عبر الإنترنت.",
     step4_title: "تأكيد فوري",
-    step4_desc: "احصل على تأكيد عبر البريد الإلكتروني والواتساب، مع بيانات سائقك.",
+    step4_desc: "احصل على تأكيد عبر واتساب، مع بيانات سائقك.",
     step5_title: "تواصل السائق",
     step5_desc: "يتصل بك سائقك في اليوم السابق لتنسيق نقطة الالتقاء.",
     step6_title: "استمتع وسدد",
@@ -1217,7 +1220,8 @@ const TRANSLATIONS = {
     contact_form_title: "أرسل لنا رسالة",
     contact_name: "الاسم الكامل",
     contact_email: "البريد الإلكتروني",
-    contact_phone: "رقم الهاتف",
+    contact_phone: "الهاتف / واتساب",
+    contact_form_note: "سنرد عليك عبر واتساب على الرقم الذي تشاركه معنا.",
     contact_message: "الرسالة / طلبات خاصة",
     contact_send: "إرسال الرسالة",
     contact_info_title: "معلومات الاتصال",
@@ -1269,7 +1273,7 @@ const TRANSLATIONS = {
     pay_secure: "عملية الدفع مشفرة بنظام SSL بحماية 256 بت",
     
     success_title: "تم تأكيد حجزك بنجاح!",
-    success_subtitle: "تم جدولة موعد النقل الخاص بك بنجاح. تم إرسال إيصال دفع العربون إلى بريدك الإلكتروني.",
+    success_subtitle: "تم جدولة موعد النقل الخاص بك بنجاح. ستصلك التفاصيل عبر واتساب.",
     success_num_label: "رقم مرجع الحجز",
     success_driver_title: "تفاصيل السائق الخاص بك (تلقائي)",
     success_driver_name: "اسم السائق",
@@ -1644,24 +1648,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Shared Contact Form Submission Mock
+  // 5. Shared Contact Form Submission — routes the inquiry to WhatsApp
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const name = document.getElementById('contact-name-input').value;
-      const email = document.getElementById('contact-email-input').value;
-      const message = document.getElementById('contact-msg-input').value;
-      
-      if (!name || !email || !message) {
+      const name = document.getElementById('contact-name-input').value.trim();
+      const phone = document.getElementById('contact-phone-input').value.trim();
+      const message = document.getElementById('contact-msg-input').value.trim();
+
+      if (!name || !phone || !message) {
         alert(currentLang === 'es' ? 'Por favor completa todos los campos' : 'Please fill all required fields');
         return;
       }
-      
-      const successMsg = currentLang === 'es' 
-        ? '¡Gracias! Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo en breve.' 
-        : 'Thank you! Your message has been sent successfully. We will contact you shortly.';
-      alert(successMsg);
+
+      const intros = {
+        en: 'Hello Salam Transfers, I am sending an inquiry from your website:',
+        es: 'Hola Salam Transfers, te envío una consulta desde su sitio web:',
+        fr: 'Bonjour Salam Transfers, je vous envoie une demande depuis votre site :',
+        ar: 'مرحباً سلام ترانسفيرز، أرسل لكم استفساراً من موقعكم:',
+      };
+      const labels = {
+        en: { name: 'Name', phone: 'Phone / WhatsApp', msg: 'Message' },
+        es: { name: 'Nombre', phone: 'Teléfono / WhatsApp', msg: 'Mensaje' },
+        fr: { name: 'Nom', phone: 'Téléphone / WhatsApp', msg: 'Message' },
+        ar: { name: 'الاسم', phone: 'الهاتف / واتساب', msg: 'الرسالة' },
+      };
+      const lang = SUPPORTED_LANGS.includes(currentLang) ? currentLang : 'en';
+      const body = `${intros[lang]}\n\n• ${labels[lang].name}: ${name}\n• ${labels[lang].phone}: ${phone}\n• ${labels[lang].msg}: ${message}`;
+      const url = `https://wa.me/529842190001?text=${encodeURIComponent(body)}`;
+      window.open(url, '_blank', 'noopener');
       contactForm.reset();
     });
   }
